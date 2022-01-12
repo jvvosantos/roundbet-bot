@@ -1,6 +1,6 @@
 import { Telegraf, Markup } from 'telegraf'
 
-const bot = new Telegraf('5093459501:AAEl_zQ972vvaqoFiJsy26gcIofvPG66dF0')
+const bot = new Telegraf(process.env.TOKEN)
 
 const gamePattern = /\w* x \w*/
 
