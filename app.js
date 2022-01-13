@@ -110,7 +110,7 @@ bot.command('scoreboard', (ctx) => {
     }
     else {
         let sortedPlayers = Object.entries(players).sort((e1, e2) => {
-            if (e1[1] > e2[i]) {
+            if (e1[1] > e2[1]) {
                 return 1
             }
             else if (e1[1] < e2[1]) {
