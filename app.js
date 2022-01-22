@@ -166,6 +166,7 @@ bot.command('endgame', (ctx) => {
             })
             .catch(() => {
                 ctx.reply(`Sorry, @${ctx.from.username}. Your operation timed out`)
+                removeFromList(interacting, talkingTo)
             });
 
     }
@@ -218,6 +219,7 @@ bot.command('placebet', (ctx) => {
                 })
                 .catch(() => {
                     ctx.reply(`Sorry, @${ctx.from.username}. Your operation timed out`)
+                    removeFromList(interacting, talkingTo)
                 });
 
         }
@@ -308,6 +310,10 @@ async function waitUserMessage(talkingTo) {
         }, 25000)
     })
 }
+
+bot.command('exportgames', (ctx) => {
+    ctx.reply(games)
+})
 
 bot.on('text', (ctx) => {
     if (isListening) {
